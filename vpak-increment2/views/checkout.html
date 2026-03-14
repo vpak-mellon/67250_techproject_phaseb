@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Veronica Pak">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>MonoMuse</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a id="navselected" href="checkout.html">Checkout</a>
+        </nav>
+        <br>
+    </header>
+    <div class="main">
+        <form>
+            <label for="name">Name: (required)</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email: (required)</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="ticketquantity">Ticket Quantity: (required)</label><br>
+            <input type="number" id="ticketquantity" name="ticketquantity" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <footer>© 2026 MonoMuse. All rights reserved.</footer>
+</body>
+</html>
