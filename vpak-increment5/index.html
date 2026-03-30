@@ -20,11 +20,12 @@
             <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
         </header>
         <nav class="nav-bar">
+            <!-- Responsive nav bar icon -->
+            <a href="javascript:void(0);" class="icon">Menu ☰</a>
             <a href="index.html">Home</a>
             <a href="views/explore.html">Explore</a>
             <a href="views/exhibitions.html">Exhibitions</a>
             <a href="views/buytickets.html">Buy Tickets</a>
-            <a href="views/checkout.html">Checkout</a>
         </nav>
         <main class="main">
             <h2 id="greeting">Welcome to MonoMuse</h2>
@@ -37,7 +38,11 @@
                 member, our exhibitions offer new perspectives on the role of 
                 technology in culture and everyday life. Plan your visit to 
                 experience cutting-edge exhibitions, hands-on experiences, and 
-                events designed to inspire curiosity and creativity.</p>
+                events designed to inspire curiosity and creativity.
+            </p>
+            <div class="embed-containers" id="video-container">
+                <iframe class="index-iframes" src="https://www.youtube.com/embed/JIp0tWE_Q28?si=JtwJd1bYFwrefWgg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <div id="tickets-btn-container">
                 <a class="clickable" id="tickets-btn" href="views/buytickets.html">BUY TICKETS</a>
             </div>
@@ -45,6 +50,17 @@
             <p id="long-intro">... LONG PARAGRAPH HERE (THIS IS VERY LONG I PROMISE)</p>
             <button class="button" id="long-intro-read-more">Read More</button>
             <button class="button" id="long-intro-read-less">Read Less</button>
+            <h2>Plan Your Visit</h2>
+            <div class="visit-info-section">
+                <div>
+                    <p class="visit-info">
+                        visit info here
+                    </p>
+                </div>
+                <div class="embed-containers" id="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.748205564685!2d2.3350690756786228!3d48.86061107133237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d877937b0f%3A0xb975fcfa192f84d4!2sLouvre%20Museum!5e0!3m2!1sen!2sus!4v1774895854416!5m2!1sen!2sus" class="index-iframes" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </main>
         <br>
         <footer class="footer">©<span id="copyYear"></span>MonoMuse. All rights reserved.</footer>

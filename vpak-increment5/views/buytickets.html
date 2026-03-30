@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Veronica Pak">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <title>MonoMuse</title>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+        </header>
+        <nav class="nav-bar">
+            <!-- Responsive nav bar icon -->
+            <a href="javascript:void(0);" class="icon">Menu ☰</a>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="buytickets.html">Buy Tickets</a>
+        </nav>
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            <div class="tickets-info-container">
+                <table class="tickets-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket Type</th>
+                            <th class="column-width-limit">Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adult</td>
+                            <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+                            <td>$18</td>
+                        </tr>
+                        <tr>
+                            <td>Student</td>
+                            <td>Student ID required</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>Member</td>
+                            <td>Member ID required</td>
+                            <td>$15</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="calendar">
+                    <tr>
+                        <th colspan="7"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="7">Select a Date</th>
+                    </tr>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="date">1</span></td>
+                        <td><span class="date">2</span></td>
+                        <td><span class="date">3</span></td>
+                        <td><span class="date">4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="date">5</span></td>
+                        <td><span class="date">6</span></td>
+                        <td><span class="date">7</span></td>
+                        <td><span class="date">8</span></td>
+                        <td><span class="date">9</span></td>
+                        <td><span class="date">10</span></td>
+                        <td><span class="date">11</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="date">12</span></td>
+                        <td><span class="date">13</span></td>
+                        <td><span class="date">14</span></td>
+                        <td><span class="date">15</span></td>
+                        <td><span class="date">16</span></td>
+                        <td><span class="date">17</span></td>
+                        <td><span class="date">18</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="date">19</span></td>
+                        <td><span class="date">20</span></td>
+                        <td><span class="date">21</span></td>
+                        <td><span class="date">22</span></td>
+                        <td><span class="date">23</span></td>
+                        <td><span class="date">24</span></td>
+                        <td><span class="date">25</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="date">26</span></td>
+                        <td><span class="date">27</span></td>
+                        <td><span class="date">28</span></td>
+                        <td><span class="date">29</span></td>
+                        <td><span class="date">30</span></td>
+                        <td><span class="date">31</span></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tickets-btn-container">
+                <a id="tickets-btn">BUY TICKETS</a>
+            </div>
+            <div class="checkout-form-container" id="checkout-form">
+                <form>
+                    <label for="name">Name: (required)</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email: (required)</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="dateOfVisit">Date of Visit: (required)</label><br>
+                    <input type="date" id="dateOfVisit" name="DateOfVisit" required readonly><br><br>
+                    <label for="ticketquantity">Ticket Quantity: (required)</label><br>
+                    <input type="number" id="ticketquantity" name="ticketquantity" required><br><br>
+                    <input type="submit" value="Submit" id="submit-form-btn">
+                </form>
+            </div>
+        </main>
+        <br>
+        <footer class="footer">©<span id="copyYear"></span>MonoMuse. All rights reserved.</footer>
+    </div>
+</body>
+</html>
