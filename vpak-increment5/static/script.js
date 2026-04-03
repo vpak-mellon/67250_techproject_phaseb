@@ -108,6 +108,36 @@ if (window.location.href.includes("index")) {
     });
 }
 
+// Explore:
+// Gallery slideshow button control:
+if (window.location.href.includes("explore")) {
+    const images = document.querySelectorAll(".gallery-image")
+    const mainImage = document.getElementById("current-image");
+    const prevBtn = document.querySelector(".previous");
+    const nextBtn = document.querySelector(".next");
+    let currentIndex = 0;
+
+    function updateGallery(index) {
+        currentIndex = index;
+        mainImage.src = images[index].src;
+
+        images.forEach(img => img.classList.remove("active"));
+        images[index].classList.add("active");
+    }
+
+    // Next button
+    nextBtn.addEventListener("click", () => {
+        let nextIndex = (currentIndex + 1) % images.length;
+        updateGallery(nextIndex);
+    });
+
+    // Prev button
+    prevBtn.addEventListener("click", () => {
+        let prevIndex = ((currentIndex - 1) + images.length) % images.length;
+        updateGallery(prevIndex);
+    });
+}
+
 // Buy Tickets: 
 // identify which date is clicked and call selectDate: 
 if (window.location.href.includes("buytickets")) {
@@ -160,15 +190,46 @@ if (window.location.href.includes("buytickets")) {
     buyForm.addEventListener("submit", (e) => {
     // Select all input types within the form --> ensures that all fields are filled
         const inputs = e.target.querySelectorAll("input");
+        const adultTickets = e.target.querySelector("#adult-ticket-quantity");
+        const studentTickets = e.target.querySelector("#student-ticket-quantity");
+        const memberTickets = e.target.querySelector("#member-ticket-quantity");
         let canSubmit = true;
         inputs.forEach(input => {
             if (input.value.trim() === "") {
                 canSubmit = false;
-            }
+            } 
         });
-        if (canSubmit) {
-            window.alert("Redirect to Payment System.");
+        if (adultTickets.value == "0" && studentTickets.value == "0" && memberTickets.value == "0") {
+            e.preventDefault();
+            window.alert("Please buy at least 1 ticket.");
+            canSubmit = false;
         }
+        if (canSubmit) {
+            window.alert(`Redirect to Payment System.\nTotal: $${updateTotal()}.00`);
+        }
+    });
+
+    // Update total display:
+    // Access elements:
+    const adultTickets = document.querySelector("#adult-ticket-quantity");
+    const studentTickets = document.querySelector("#student-ticket-quantity");
+    const memberTickets = document.querySelector("#member-ticket-quantity");
+    const totalDisplay = document.querySelector("#total-cost");
+    // Set dictionary of ticket prices
+    const PRICES = {adult: 18, student: 10, member: 15};
+    // Function to update total
+    function updateTotal() {
+        const adultQty = parseInt(adultTickets.value) || 0;
+        const studentQty = parseInt(studentTickets.value) || 0;
+        const memberQty = parseInt(memberTickets.value) || 0;
+        let total = (adultQty * PRICES.adult) + (studentQty * PRICES.student) + (memberQty * PRICES.member);
+        totalDisplay.textContent = `Total Cost: $${total}.00`;
+        return total;
+    }
+
+    // listen for changes
+    [adultTickets, studentTickets, memberTickets].forEach(input => {
+        input.addEventListener("input", updateTotal);
     });
 }
 

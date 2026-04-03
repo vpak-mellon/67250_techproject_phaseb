@@ -6,8 +6,8 @@
 /* Bright Purple: #8E49FF */
 
 * {
-  padding: 5px;
-  margin: 5px;
+  padding: 3px;
+  margin: 3px;
   background: #1d1924;
   color:  #f5f5f7;
   font-family: "Figtree", sans-serif;
@@ -56,9 +56,19 @@ img {
   border-radius: 1rem;
 }
 
+/* Buy tickets checkout form styles */
 form * {
-  margin: auto;
   text-align: center;
+}
+
+form input, form h3 {
+  margin-right: 2rem;
+}
+
+.form-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 th {
@@ -83,14 +93,6 @@ footer {
   'footer footer';
 }
 
-/* contains tickets table and calendar */
-.tickets-info-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 .header {
   grid-area: "header"; 
 }
@@ -111,6 +113,33 @@ footer {
   max-width: 100%;
 }
 
+/* two-part grid style */
+.two-part-section {
+  display: grid;
+  grid-template-areas: 
+    'left-section right-section';
+}
+
+.left-section {
+  grid-area: "left-section";
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.left-section * {
+  margin-left: 0;
+}
+
+.right-section {
+  grid-area: "right-section";
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.right-section * {
+  margin-right: 0;
+}
+
 /* for API-linked elements */
 .embed-containers {
   display: flex;
@@ -122,27 +151,6 @@ footer {
   width: 45rem;
   height: 27rem;
   border: none;
-}
-
-/* two-part grid style */
-.two-part-section {
-  display: grid;
-  grid-template-areas: 
-    'left-section right-section';
-  margin: 0;
-  padding-left: 0;
-}
-
-.left-section {
-  grid-area: "left-section";
-  margin: 0;
-  padding: 0;
-}
-
-.right-section {
-  grid-area: "right-section";
-  margin: 0;
-  padding: 0;
 }
 
 .visit-info {
@@ -161,9 +169,57 @@ footer {
   color:#8D61D5;    
 }
 
+/* Gallery slideshow */
+.gallery * {
+  margin: 0;
+}
+
+.main-gallery-image {
+  position: relative;
+}
+
+.main-gallery-image img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.main-gallery-image button {
+  min-width: 8rem;
+  height: 2rem;
+  background-color:#8E49FF;
+}
+
+.main-gallery-image button:hover {
+  background-color:#8D61D5;
+}
+
+.gallery-image {
+  display: none;
+}
+
+/* contains tickets table and calendar */
+.tickets-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 /* Max. column width for tickets info. table */
 .column-width-limit {
   width: 20rem;
+}
+
+/* Buy tickets calendar */
+.calendar * {
+  padding: 0.5rem;
 }
 
 .calendar td {
@@ -174,6 +230,7 @@ footer {
   background-color: #6F6580;
 }
 
+/* Checkout form */
 .checkout-form-container {
   display: none;
 }
@@ -234,7 +291,8 @@ footer {
   }
 
   h2 {
-    font-size: 1rem;
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
   }
 
   body {
@@ -262,29 +320,37 @@ footer {
     display: block;
   }
 
+  .two-part-section {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* index page video */
   .index-iframes {
     width: 20rem;
     height: 12rem;
   }
 
-  .two-part-section {
-    display: flex;
-    flex-direction: column;
+  /* Gallery slideshow */
+  .main-gallery-image img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    display: block;
   }
 
+  /* Buy tickets information container */
   .tickets-info-container * {
     margin: 0 auto;
   }
 
-  #map-container, .visit-info {
-    width: 100%;
-    margin: auto;
+  /* Max. column width for tickets info. table */
+  .column-width-limit {
+    width: 10rem;
   }
 
-  #map-container iframe {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 0;
+  .form-divider {
+    flex-direction: column;
+    justify-content: center;
   }
 }

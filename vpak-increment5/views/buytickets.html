@@ -116,7 +116,7 @@
                         <td class="date">28</td>
                         <td class="date">29</td>
                         <td class="date">30</td>
-                        <td class="date">31</td>
+                        <td></td>
                         <td></td>
                     </tr>
                 </table>
@@ -126,15 +126,26 @@
             </div>
             <div class="checkout-form-container" id="checkout-form">
                 <form>
-                    <label for="name">Name: (required)</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="email">Email: (required)</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="dateOfVisit">Date of Visit: (required)</label><br>
-                    <input type="date" id="dateOfVisit" name="DateOfVisit" required readonly><br><br>
-                    <label for="ticketquantity">Ticket Quantity: (required)</label><br>
-                    <input type="number" id="ticketquantity" name="ticketquantity" required><br><br>
-                    <input type="submit" value="Submit" id="submit-form-btn">
+                    <div class="form-divider">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="dateOfVisit">Date of Visit:</label><br>
+                        <input type="date" id="dateOfVisit" name="DateOfVisit" required readonly><br><br>
+                    </div>
+                    <div class="form-divider">
+                        <label for="adult-ticket-quantity">Adult Ticket Quantity:</label><br>
+                        <input type="number" id="adult-ticket-quantity" name="adult-ticket-quantity" value="0" required><br><br>
+                        <label for="student-ticket-quantity">Student Ticket Quantity:</label><br>
+                        <input type="number" id="student-ticket-quantity" name="student-ticket-quantity" value="0" required><br><br>
+                        <label for="member-ticket-quantity">Member Ticket Quantity:</label><br>
+                        <input type="number" id="member-ticket-quantity" name="member-ticket-quantity" value="0" required><br><br>
+                    </div>
+                    <div class="form-divider">
+                        <h3 id="total-cost">Total: $0.00</h3>
+                        <input type="submit" value="Submit" id="submit-form-btn">
+                    </div>
                 </form>
             </div>
         </main>
