@@ -100,7 +100,7 @@ if (window.location.href.includes("index")) {
 
     });
   
-    // Index page: When the "Read More" button is clicked
+    // Index page: When the "Read More" button is clicked - jQuery
     $("#long-intro-read-more").click(function(){
         $("#long-intro").show();  // Show the long introduction text
         $("#long-intro-read-less").show();   // Show the "Read Less" button

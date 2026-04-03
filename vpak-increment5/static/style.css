@@ -14,6 +14,30 @@
   font-optical-sizing: auto;
   font-weight: 100;
   line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 5rem;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
 }
 
 nav a {
@@ -22,12 +46,15 @@ nav a {
   font-weight: 400;
   padding: 8px 10px;
   border: 1px solid transparent;
-  border-radius: 3px;
 }
 
 nav a:hover {
   border-color: #8E49FF;
-  }
+}
+
+img {
+  border-radius: 1rem;
+}
 
 form * {
   margin: auto;
@@ -52,14 +79,15 @@ footer {
   grid-template-areas:   
   'header header',
   'nav_bar nav_bar',
-  'main main-img',
+  'main main',
   'footer footer';
 }
 
+/* contains tickets table and calendar */
 .tickets-info-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -79,35 +107,46 @@ footer {
   grid-area: "main"; 
 }
 
-.main_img {
-  grid-area: "main-img"; 
+.main-exhibitions img {
+  max-width: 100%;
 }
 
+/* for API-linked elements */
 .embed-containers {
   display: flex;
   justify-content: center;
 }
 
+/* iframes on index page */
 .index-iframes {
   width: 45rem;
   height: 27rem;
   border: none;
-  border-radius: 3px;
 }
 
-.visit-info-section {
+/* two-part grid style */
+.two-part-section {
   display: grid;
   grid-template-areas: 
-    'visit-info map-container'
+    'left-section right-section';
+  margin: 0;
+  padding-left: 0;
+}
+
+.left-section {
+  grid-area: "left-section";
+  margin: 0;
+  padding: 0;
+}
+
+.right-section {
+  grid-area: "right-section";
+  margin: 0;
+  padding: 0;
 }
 
 .visit-info {
-  grid-area: "visit-info";
   width: 50%;
-}
-
-#map-container {
-  grid-area: "map-container";
 }
 
 #map-container iframe {
@@ -124,7 +163,11 @@ footer {
 
 /* Max. column width for tickets info. table */
 .column-width-limit {
-  width: 350px;
+  width: 20rem;
+}
+
+.calendar td {
+  text-align: center;
 }
 
 .calendar .date:hover {
@@ -140,7 +183,7 @@ footer {
 }
 
 .full-screen-img {
-  width: 90vw;
+  width: 100%;
 }
 
 #tickets-btn-container {
@@ -155,7 +198,6 @@ footer {
   padding-right: 15px;
   background-color:#6F6580;
   border-color: transparent;
-  border-radius: 5px;
   font-size: 2em;
   text-align: center;
   text-decoration: None;
@@ -165,6 +207,10 @@ footer {
 #tickets-btn.clickable {
   background-color:#8E49FF;
   font-weight: bold;
+}
+
+#tickets-btn.clickable:hover {
+  background-color: #8D61D5;
 }
 
 #logo {
@@ -183,6 +229,20 @@ footer {
 
 /* Mobile aspect ratio media query */
 @media only screen and (max-width: 992px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    width: 100%
+  }
+
   /* Responsive nav bar */
   .nav-bar a {
     display: none;
@@ -204,20 +264,27 @@ footer {
 
   /* index page video */
   .index-iframes {
-    width: 25rem;
-    height: 15rem;
+    width: 20rem;
+    height: 12rem;
   }
 
-  .visit-info-section {
+  .two-part-section {
     display: flex;
     flex-direction: column;
   }
 
+  .tickets-info-container * {
+    margin: 0 auto;
+  }
+
   #map-container, .visit-info {
     width: 100%;
+    margin: auto;
   }
 
   #map-container iframe {
     width: 100%;
-}
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
