@@ -30,6 +30,7 @@
         <main class="main">
             <h2>Buy Tickets</h2>
             <div class="tickets-info-container two-part-section">
+                <!-- Tickets information table -->
                 <table class="tickets-table left-section">
                     <thead>
                         <tr>
@@ -56,6 +57,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- Calendar for date selection -->
                 <table class="calendar right-section">
                     <tr>
                         <th colspan="7"></th>
@@ -121,9 +123,11 @@
                     </tr>
                 </table>
             </div>
+            <!-- Buy tickets button (responsive to date selection) -->
             <div id="tickets-btn-container">
                 <a id="tickets-btn">BUY TICKETS</a>
             </div>
+            <!-- Checkout form -->
             <div class="checkout-form-container" id="checkout-form">
                 <form>
                     <div class="form-divider">
@@ -144,6 +148,10 @@
                     </div>
                     <div class="form-divider">
                         <h3 id="total-cost">Total: $0.00</h3>
+                        <div>
+                            <input type="checkbox" id="mailing-list" name="mailing-list">
+                            <label for="mailing-list">Join the mailing list.</label><br>
+                        </div>
                         <input type="submit" value="Submit" id="submit-form-btn">
                     </div>
                 </form>

@@ -29,45 +29,46 @@
             <a href="views/buytickets.html">Buy Tickets</a>
         </nav>
         <main class="main">
+            <!-- Introduction -->
             <h2 id="greeting">Welcome to MonoMuse</h2>
-            <p>MonoMuse is a contemporary museum dedicated to exploring the 
-                intersection of art, technology, and human creativity. Through 
-                immersive exhibitions, interactive installations, and rotating 
-                collections, MonoMuse invites visitors to discover how digital 
-                innovation is transforming the way we create, experience, and 
-                understand art. Whether you are a first-time visitor or a returning 
-                member, our exhibitions offer new perspectives on the role of 
-                technology in culture and everyday life. Plan your visit to 
-                experience cutting-edge exhibitions, hands-on experiences, and 
-                events designed to inspire curiosity and creativity.
+            <p>Welcome to MonoMuse! MonoMuse is a contemporary museum located in 
+                Paris, France. Our current attraction is the Remedios Varo 
+                exhibition. Book your tickets today.
             </p>
             <div id="tickets-btn-container">
-                <a class="clickable" id="tickets-btn" href="views/buytickets.html">BUY TICKETS</a>
+                <a class="clickable initial-btn" id="tickets-btn" href="views/buytickets.html">BUY TICKETS</a>
             </div>
             <div class="embed-containers" id="video-container">
                 <iframe class="index-iframes" src="https://www.youtube.com/embed/JIp0tWE_Q28?si=JtwJd1bYFwrefWgg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            <!-- About the artist -->
             <h2>About the Artist:</h2>
-            <p id="short-intro">Remedios Varo (1908–1963) was a Spanish-born 
-                surrealist painter known for her imaginative, dreamlike works 
-                that blend science, mysticism, and psychology. She studied at 
-                the Real Academia de Bellas Artes de San Fernando in Madrid, 
-                where she developed strong technical skills and an early 
-                interest in avant-garde movements. During World War II, she fled 
-                Europe, eventually settling in Mexico, where she spent the most 
-                productive period of her career and became part of a vibrant 
-                artistic community.</p>
-            <p id="long-intro">In Mexico, Varo developed her distinctive, highly 
-                detailed style, drawing on influences such as alchemy, esoteric 
-                philosophy, and scientific thought. Her paintings often depict 
-                solitary figures engaged in mysterious tasks, exploring themes 
-                of transformation, inner journeys, and the creative process. 
-                Today, her work is widely recognized as a significant 
-                contribution to 20th-century surrealism and continues to 
-                captivate audiences with its symbolic depth and imaginative 
-                vision.</p>
-            <button class="button" id="long-intro-read-more">Read More</button>
-            <button class="button" id="long-intro-read-less">Read Less</button>
+            <div class="two-part-section">
+                <img src="./static/images/remedios_varo.png" class="left-section" alt="Creacion de las Aves by Remedios Varo">
+                <div class="right-section">
+                    <p id="short-intro">Remedios Varo (1908–1963) was a Spanish-born 
+                    surrealist painter known for her imaginative, dreamlike works 
+                    that blend science, mysticism, and psychology. She studied at 
+                    the Real Academia de Bellas Artes de San Fernando in Madrid, 
+                    where she developed strong technical skills and an early 
+                    interest in avant-garde movements. During World War II, she fled 
+                    Europe, eventually settling in Mexico, where she spent the most 
+                    productive period of her career and became part of a vibrant 
+                    artistic community.</p>
+                    <p id="long-intro">In Mexico, Varo developed her distinctive, highly 
+                    detailed style, drawing on influences such as alchemy, esoteric 
+                    philosophy, and scientific thought. Her paintings often depict 
+                    solitary figures engaged in mysterious tasks, exploring themes 
+                    of transformation, inner journeys, and the creative process. 
+                    Today, her work is widely recognized as a significant 
+                    contribution to 20th-century surrealism and continues to 
+                    captivate audiences with its symbolic depth and imaginative 
+                    vision.</p>
+                    <button class="button" id="long-intro-read-more">Read More</button>
+                    <button class="button" id="long-intro-read-less">Read Less</button>
+                </div>
+            </div>
+            <!-- Visit information -->
             <h2>Plan Your Visit</h2>
             <div class="two-part-section" id="visit-info-section">
                 <div>
